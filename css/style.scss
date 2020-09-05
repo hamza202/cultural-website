@@ -25,6 +25,7 @@ $text-color: #222933;
 $gray-color: #A5A5A5;
 $gold-color: #DBB34A;
 body {
+  color: $black-color;
   font-family: Grotesk, 'sans-serif';
 }
 
@@ -115,10 +116,16 @@ a {
   padding: 10px 0;
   p{
     font-size: 30px;
+    @include media-breakpoint-down(md){
+      font-size: 20px;
+    }
   }
   a{
     color: $black-color;
     font-size: 30px;
+    @include media-breakpoint-down(md){
+      font-size: 20px;
+    }
     &:first-child{
       margin-right: 15px;
     }
