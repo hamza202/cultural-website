@@ -189,12 +189,7 @@ $(document).ready(function () {
         ease: Expo.easeInOut,
         x: 0
     });
-    var t3 = new TimelineMax({paused: true});
-    t3.to('.placeholder img', 0.8, {
-        opacity: 1,
-        y: "0",
-        ease: Power3.ease
-    });
+
     $(window).on('load', function () {
 
         var t4 = new TimelineMax({paused: true});
@@ -202,7 +197,12 @@ $(document).ready(function () {
             y: "105%",
             ease: Power4.ease
         }, 0.20);
-
+        var t3 = new TimelineMax({paused: true});
+        // t3.to('.placeholder img', 0.8, {
+        //     opacity: 1,
+        //     y: "0",
+        //     ease: Power3.ease
+        // });
         t3.to('.placeholder img', 1.5, {
             opacity: 0,
             delay: 1,
