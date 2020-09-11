@@ -31,6 +31,12 @@
 //         }
 //     };
 // }();
+var t3 = new TimelineMax({paused: true});
+t3.to('.placeholder img', 0.8, {
+    opacity: 1,
+    y: "0",
+    ease: Power3.ease
+});
 
 $(document).ready(function () {
     $(".menu-list li").hover(
@@ -189,12 +195,7 @@ $(document).ready(function () {
         ease: Expo.easeInOut,
         x: 0
     });
-    var t3 = new TimelineMax({paused: true});
-    t3.to('.placeholder img', 0.8, {
-        opacity: 1,
-        y: "0",
-        ease: Power3.ease
-    });
+
     $(window).on('load', function () {
 
         var t4 = new TimelineMax({paused: true});
