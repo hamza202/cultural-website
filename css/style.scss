@@ -2,15 +2,25 @@
 @import "scss/_functions.scss";
 @import "scss/_variables.scss";
 @import "scss/mixins/_breakpoints.scss";
-
+@import "locomotive-scroll.css";
 @font-face {
   font-family: Grotesk;
-  src: url(../fonts/Grotesk_Medium_Regular.ttf);
+  src: url(../fonts/FoundersGroteskText-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Grotesk;
+  src: url(../fonts/FoundersGroteskText-Medium.otf);
   font-weight: 500;
 }
 @font-face {
   font-family: Grotesk;
-  src: url(../fonts/Grotesk-Bold.ttf);
+  src: url(../fonts/FoundersGroteskText-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Blak;
+  src: url(../fonts/BlakNormal.otf);
   font-weight: 700;
 }
 
@@ -27,6 +37,7 @@ $gold-color: #DBB34A;
 body {
   color: $black-color;
   font-family: Grotesk, 'sans-serif';
+  //width: 100vw;
 }
 
 a {
@@ -35,6 +46,51 @@ a {
 
   &:hover {
     text-decoration: none;
+  }
+}
+.page-container{
+  position: relative;
+  background-color: #f5f5f5;
+  padding-top: 110px;
+}
+.placeholder-container{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  bottom: 0;
+
+  span{
+    position: absolute;
+    width: 250%;
+    height: 100vh;
+    z-index: 99;
+    left: -75%;
+    top: 0;
+    background-color: $black-color;
+  }
+  .placeholder{
+    position: absolute;
+    width: 250%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: $primary-color;
+    left: -75%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 15%;
+      height: auto;
+      opacity: 0;
+      transform: translateY(-100%);
+    }
   }
 }
 
@@ -54,7 +110,7 @@ a {
   //background-color: rgba($primary-color, 0.5);
 
   .logo {
-    img {
+    img { opacity: 0;
       height: 50px;
       width: auto;
       @include media-breakpoint-down(md){
@@ -107,6 +163,7 @@ a {
 }
 
 #footer {
+
   background-color: rgba($primary-color, 0.8);
   position: absolute;
   bottom: 0;
@@ -166,7 +223,6 @@ a {
         font-size: 70px;
         font-weight: 500;
         color: $black-color;
-        letter-spacing: 2px;
       }
     }
   }
@@ -200,4 +256,83 @@ a {
       top: 5px;
     }
   }
+}
+
+.big-top-title{
+  h2{
+    font-size: 8.2vw;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    height: 11vw;
+    margin: 0;
+    span{
+      position: absolute;
+      z-index: 4;
+      display: block;
+      line-height: 9vw;
+    }
+  }
+}
+.first-section{
+  @include media-breakpoint-up(lg){
+    height: calc(100vh - 110px);
+  }
+}
+.arrow-down{
+  position: absolute;
+  bottom: 40px;
+  animation-name: arrow-animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  img{
+    height: 80px;
+    width: auto;
+  }
+}
+.arrow-down-right{
+  right: 0;
+}
+.arrow-down-left{
+  left: 0;
+}
+
+@keyframes arrow-animate {
+  0%   {transform: translateY(-20px); opacity: 0.5}
+  50%   {transform: translateY(0); opacity: 1}
+  100% {transform: translateY(-20px); opacity: 0.5}
+}
+
+.full-width-img{
+  width: 100%;
+  height: auto;
+}
+.main-title{
+  font-family: Blak, 'sans-serif';
+  font-size: 100px;
+  @include media-breakpoint-down(md){
+    font-size: 48px;
+  }
+  &.top-left-main-title{
+    top: -60px;
+    left: 15px;
+    position: absolute;
+    z-index: 2;
+    @include media-breakpoint-down(md){
+      top: -28px;
+    }
+  }
+  &.bottom-right-main-title{
+    bottom:0;
+    right: 15px;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+  }
+}
+
+.scale-rotate-img{
+   img{
+     transform: scale(1.2) rotate(5deg);
+   }
 }
