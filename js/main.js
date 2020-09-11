@@ -198,21 +198,16 @@ $(document).ready(function () {
             ease: Power4.ease
         }, 0.20);
         var t3 = new TimelineMax({paused: true});
-        // t3.to('.placeholder img', 0.8, {
-        //     opacity: 1,
-        //     y: "0",
-        //     ease: Power3.ease
-        // });
-        t3.to('.placeholder img', 1.5, {
+
+        t3.to('.placeholder-img', 1.5, {
             opacity: 0,
-            delay: 1,
             duration: 0.5,
-            y: "-100%",
+            y: "-120%",
             ease: Expo.easeInOut,
         });
         t3.to('.placeholder', {
             duration: 1.5,
-            delay: 0,
+            delay: -0.4,
             // opacity:0.5,
             BorderRadius: "50%",
             y: "-100%",
