@@ -308,6 +308,7 @@ a {
   height: auto;
 }
 .main-title{
+  transition: all ease 0.2s;
   font-family: Blak, 'sans-serif';
   font-size: 100px;
   @include media-breakpoint-down(md){
@@ -335,4 +336,12 @@ a {
    img{
      transform: scale(1.2) rotate(5deg);
    }
+  }
+.scale-rotate-img-reverse{
+  img{
+    transform: scale(1.2) rotate(-5deg);
+  }
+}
+.my-breadcrumb{
+  font-size: 20px;
 }

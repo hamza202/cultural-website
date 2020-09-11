@@ -61,12 +61,41 @@ $(document).ready(function () {
             duration: 1,
             ease: "power5.ease",
             scrollTrigger: {
-                trigger: ".scale-rotate-img",
+                trigger: ".a1",
                 start: "-10% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
                 markers: true,
+            }
+        });
+        gsap.to(".a2 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            ease: "power5.ease",
+            scrollTrigger: {
+                trigger: ".a2",
+                start: "-10% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+                markers: true,
+            }
+        });
+        gsap.to(".a3", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            ease: "power5.ease",
+            scrollTrigger: {
+                trigger: ".a2",
+                start: "-10% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+                markers: true,
+                scrub:true
             }
         });
     }
@@ -211,6 +240,17 @@ $(document).ready(function () {
             }
         });
         t3.play();
+
+        // document.addEventListener("mousemove", parallax);
+        // function parallax(e) {
+        //     this.querySelectorAll('.main-title-parallax').forEach(layer =>{
+        //         const speed = layer.getAttribute('data-speed');
+        //         const x = (window.innerWidth - e.pageX*speed)/100;
+        //         const y = (window.innerWidth - e.pageY*speed)/100;
+        //         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        //
+        //     })
+        // }
 
     })
 });

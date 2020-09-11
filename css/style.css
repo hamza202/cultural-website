@@ -280,6 +280,8 @@ a {
   height: auto; }
 
 .main-title {
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
   font-family: Blak, 'sans-serif';
   font-size: 100px; }
   @media (max-width: 991.98px) {
@@ -303,5 +305,12 @@ a {
 .scale-rotate-img img {
   -webkit-transform: scale(1.2) rotate(5deg);
           transform: scale(1.2) rotate(5deg); }
+
+.scale-rotate-img-reverse img {
+  -webkit-transform: scale(1.2) rotate(-5deg);
+          transform: scale(1.2) rotate(-5deg); }
+
+.my-breadcrumb {
+  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
