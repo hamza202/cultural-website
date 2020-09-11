@@ -74,7 +74,13 @@ a {
     .placeholder-container .placeholder img {
       width: 15%;
       height: auto;
-      opacity: 1; }
+      opacity: 1;
+      -webkit-animation-name: arrow-animate;
+              animation-name: arrow-animate;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
 
 .main-wrapper {
   position: relative;
