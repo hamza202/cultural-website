@@ -267,7 +267,7 @@ a {
     font-weight: 500;
     overflow: hidden;
     position: relative;
-    height: 11vw;
+    height: 9.2vw;
     margin: 0;
     span{
       position: absolute;
@@ -291,6 +291,9 @@ a {
   img{
     height: 80px;
     width: auto;
+  }
+  @include media-breakpoint-down(lg){
+    display: none;
   }
 }
 .arrow-down-right{

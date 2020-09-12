@@ -222,7 +222,7 @@ a {
   font-weight: 500;
   overflow: hidden;
   position: relative;
-  height: 11vw;
+  height: 9.2vw;
   margin: 0; }
   .big-top-title h2 span {
     position: absolute;
@@ -246,6 +246,9 @@ a {
   .arrow-down img {
     height: 80px;
     width: auto; }
+  @media (max-width: 1199.98px) {
+    .arrow-down {
+      display: none; } }
 
 .arrow-down-right {
   right: 0; }

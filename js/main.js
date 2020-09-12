@@ -54,10 +54,11 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a1",
-                start: "-10% center",
+                start: "-40% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
+                markers:true
             }
         });
         gsap.to(".a2 img", {
@@ -66,7 +67,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a2",
-                start: "-10% center",
+                start: "-40% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
