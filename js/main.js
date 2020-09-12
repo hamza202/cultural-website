@@ -103,8 +103,8 @@ $(document).ready(function () {
         });
         gsap.from(".card-1 .my-breadcrumb",{
             opacity:0,
-            y:100,
-            duration:2,
+            y:150,
+            duration:3,
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".card-1",
@@ -116,8 +116,8 @@ $(document).ready(function () {
         });
         gsap.from(".card-2 .my-breadcrumb",{
             opacity:0,
-            y:100,
-            duration:2,
+            y:150,
+            duration:3,
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".card-2",
