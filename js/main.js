@@ -45,7 +45,7 @@ $(document).ready(function () {
     );
 
 
-
+    var arr1 = [0,0,100,0,100,100,0,100];
     //work_page_scroll_trigger
     function work_page_scroll_trigger() {
         gsap.to(".a1 img", {
@@ -58,7 +58,6 @@ $(document).ready(function () {
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
-                markers:true
             }
         });
         gsap.to(".a2 img", {
@@ -73,7 +72,6 @@ $(document).ready(function () {
                 toggleActions: "play none none reverse",
             }
         });
-        var arr1 = [0,0,100,0,100,100,0,100];
         gsap.to(".card-1 a",{
             opacity:1,
             webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
@@ -131,6 +129,177 @@ $(document).ready(function () {
         });
     }
 
+    //deep page scroll trigger
+    function deep_page_scroll_trigger() {
+        gsap.to(".a3 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a3",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a4",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".a4",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a5",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".a5",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a6", {
+            y:0,
+            opacity:1,
+            duration:1,
+            scrollTrigger: {
+                trigger: ".a6",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a7",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".a7",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a8 p",{
+            y:0,
+            opacity:1,
+            duration:1.5,
+            stagger:0.3,
+            scrollTrigger: {
+                trigger: ".a8",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        },);
+        gsap.to(".a9", {
+            y:0,
+            opacity:1,
+            duration:1,
+            scrollTrigger: {
+                trigger: ".a9",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a10 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a10",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a11 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a11",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a12",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".a12",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a13",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".a13",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a14 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a14",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a15 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a15",
+                start: "-40% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+    }
+
     function smooth_scroll() {
         gsap.registerPlugin(ScrollTrigger);
         //smooth scroll function
@@ -157,6 +326,7 @@ $(document).ready(function () {
         });
 
         work_page_scroll_trigger();
+        deep_page_scroll_trigger();
 
         ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
