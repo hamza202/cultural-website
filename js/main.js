@@ -52,43 +52,80 @@ $(document).ready(function () {
             scale: 1,
             rotate: 0,
             duration: 1,
-            ease: "power5.ease",
             scrollTrigger: {
                 trigger: ".a1",
                 start: "-10% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
-                markers: true,
             }
         });
         gsap.to(".a2 img", {
             scale: 1,
             rotate: 0,
             duration: 1,
-            ease: "power5.ease",
             scrollTrigger: {
                 trigger: ".a2",
                 start: "-10% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
-                markers: true,
             }
         });
-        gsap.to(".a3", {
-            scale: 1,
-            rotate: 0,
-            duration: 1,
-            ease: "power5.ease",
+        var arr1 = [0,0,100,0,100,100,0,100];
+        gsap.to(".card-1 a",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
             scrollTrigger: {
-                trigger: ".a2",
-                start: "-10% center",
+                trigger: ".card-1",
+                start: "-30% center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
-                markers: true,
-                scrub:true
+            }
+        });
+        gsap.to(".card-2 a",{
+            opacity:1,
+            webkitClipPath:'polygon('+arr1[0]+'%'+arr1[1]+'%,'+arr1[2]+'%'+arr1[3]+'%,'+arr1[4]+'%'+arr1[5]+'%,'+arr1[6]+'%'+arr1[7]+'%)',
+            y:0,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".card-2",
+                start: "-30% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.from(".card-1 .my-breadcrumb",{
+            opacity:0,
+            y:100,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".card-1",
+                start: "-30% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.from(".card-2 .my-breadcrumb",{
+            opacity:0,
+            y:100,
+            duration:2,
+            ease: Power4.easeOut,
+            scrollTrigger: {
+                trigger: ".card-2",
+                start: "30% center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+                // markers: true
             }
         });
     }
@@ -100,7 +137,7 @@ $(document).ready(function () {
             el: document.querySelector(".smooth-scroll"),
             smooth: true
         });
-        $('.arrow-down').on("click", function () {
+        $('.go-to').on("click", function () {
             locoScroll.scrollTo($(this).attr("data-goTo"), -50)
         });
         // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
