@@ -137,7 +137,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a3",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -151,7 +151,7 @@ $(document).ready(function () {
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".a4",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -165,7 +165,7 @@ $(document).ready(function () {
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".a5",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -177,7 +177,7 @@ $(document).ready(function () {
             duration:1,
             scrollTrigger: {
                 trigger: ".a6",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -191,7 +191,7 @@ $(document).ready(function () {
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".a7",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -204,7 +204,7 @@ $(document).ready(function () {
             stagger:0.3,
             scrollTrigger: {
                 trigger: ".a8",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -216,7 +216,7 @@ $(document).ready(function () {
             duration:1,
             scrollTrigger: {
                 trigger: ".a9",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -228,7 +228,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a10",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -240,7 +240,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a11",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -254,7 +254,7 @@ $(document).ready(function () {
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".a12",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -268,7 +268,7 @@ $(document).ready(function () {
             ease: Power4.easeOut,
             scrollTrigger: {
                 trigger: ".a13",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -280,7 +280,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a14",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -292,7 +292,7 @@ $(document).ready(function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".a15",
-                start: "-40% center",
+                start: "-320vh center",
                 scroller: ".smooth-scroll",
                 end: "+50% center",
                 toggleActions: "play none none reverse",
@@ -300,6 +300,21 @@ $(document).ready(function () {
         });
     }
 
+    //MULA page scroll trigger
+    function mula_page_scroll_trigger(){
+        gsap.to(".a16 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a16",
+                start: "-320vh center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+    }
     function smooth_scroll() {
         gsap.registerPlugin(ScrollTrigger);
         //smooth scroll function
@@ -327,6 +342,7 @@ $(document).ready(function () {
 
         work_page_scroll_trigger();
         deep_page_scroll_trigger();
+        mula_page_scroll_trigger();
 
         ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
