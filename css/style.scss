@@ -265,6 +265,13 @@ a {
   &.big-top-title-2{
     h2 {
       font-size: 7.2vw;
+      &.title-big-2{
+        font-size: 7vw;
+        height: 7.2vw;
+        span{
+          top: -2vw;
+        }
+      }
     }
   }
   h2{

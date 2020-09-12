@@ -338,6 +338,30 @@ $(document).ready(function () {
                 toggleActions: "play none none reverse",
             }
         });
+        gsap.to(".a19 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a19",
+                start: "-320vh center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
+        gsap.to(".a20 img", {
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".a20",
+                start: "-320vh center",
+                scroller: ".smooth-scroll",
+                end: "+50% center",
+                toggleActions: "play none none reverse",
+            }
+        });
     }
     function smooth_scroll() {
         gsap.registerPlugin(ScrollTrigger);
