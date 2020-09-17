@@ -13,11 +13,13 @@
     <div class="placeholder-container">
         <span></span>
         <div class="placeholder">
-            <img src="images/logo.svg" alt="image"/>
+            <div class="placeholder-img w-100 text-center">
+                <img src="images/logo.svg" alt="image"/>
+            </div>
         </div>
     </div>
 
-    <header id="header">
+    <header id="header" class="index-header">
         <div class="container-fluid px-lg-5 position-relative">
             <div class="row align-items-center">
                 <div class="col">
@@ -52,15 +54,11 @@
         </div>
     </header>
 
-    <div class="page-content w-100 d-flex align-items-center">
-        <div>
-            <video id="myVideo" class="w-100" autoplay muted loop>
-                <source src="images/hero.mp4" type="video/mp4">
-                <source src="images/hero.mp4" type="video/ogg">
-                Your browser does not support HTML video.
-            </video>
-        </div>
-
+    <div class="page-content w-100 d-flex align-items-center v-container">
+        <video id="myVideo" class="w-100" autoplay muted loop>
+            <source src="images/hero.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
     </div>
     <footer id="footer">
         <div class="container-fluid px-lg-5">
@@ -82,11 +80,29 @@
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <!--page js-->
+<!--page js-->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/ScrollToPlugin.min.js"></script>
+<script src="js/locomotive-scroll.min.js"></script>
 <script src="js/main.js"></script>
 <script>
-
+    $(document).ready(function () {
+        if ($(window).width() <= 768) {
+            document.querySelector("#myVideo source").src = "images/joined.mp4";
+            document.getElementById("myVideo").load();
+        }
+        window.addEventListener('resize', function () {
+            if ($(window).width() <= 768) {
+                document.querySelector("#myVideo source").src = "images/joined.mp4";
+                document.getElementById("myVideo").load();
+            } else {
+                document.querySelector("#myVideo source").src = "images/hero.mp4";
+                document.getElementById("myVideo").load();
+            }
+        });
+    });
 </script>
 </body>
 </html>

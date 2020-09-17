@@ -538,7 +538,7 @@ $(document).ready(function () {
                     opacity: 1,
                     duration: 1,
                     y: 0,
-                    stagger:0.5,
+                    stagger: 0.5,
                     scrollTrigger: {
                         trigger: ".service-accordion",
                         start: "10% 90%",
@@ -565,7 +565,7 @@ $(document).ready(function () {
                 gsap.to(".our-client-section .clint-img-container", {
                     opacity: 1,
                     duration: 1,
-                    stagger:0.2,
+                    stagger: 0.2,
                     scrollTrigger: {
                         trigger: ".our-client-section",
                         start: "10% 90%",
@@ -621,7 +621,7 @@ $(document).ready(function () {
         }
 
 // menu toggle animation
-
+    if ($('#header').length) {
         var tl = new TimelineMax({paused: true});
 
         tl.to('.line1', {
@@ -677,14 +677,16 @@ $(document).ready(function () {
             ease: Expo.easeInOut,
             x: 0
         });
-
+    }
         $(window).on('load', function () {
 
             var t4 = new TimelineMax({paused: true});
-            t4.staggerFrom('.text-hidden', 1.5, {
-                y: "105%",
-                ease: Power4.ease
-            }, 0.20);
+            if ($('.text-hidden').length) {
+                t4.staggerFrom('.text-hidden', 1.5, {
+                    y: "105%",
+                    ease: Power4.ease
+                }, 0.20);
+            }
             var t3 = new TimelineMax({paused: true});
 
             t3.to('.placeholder-img', 1.5, {
@@ -722,7 +724,9 @@ $(document).ready(function () {
                     if ($('.text-hidden').length) {
                         t4.play();
                     }
-                    smooth_scroll();
+                    if ($('.smooth-scroll').length) {
+                        smooth_scroll();
+                    }
                     page_has_load();
                 }
             });
@@ -738,7 +742,13 @@ $(document).ready(function () {
             //
             //     })
             // }
-
+            let inputFocus = $(".input-container input");
+            inputFocus.on("focusin",function () {
+                $(this).parent().addClass("focus");
+            });
+            inputFocus.on("focusout",function () {
+                $(this).parent().removeClass("focus");
+            })
         });
     }
 )
