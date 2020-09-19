@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93d0960-bfb8-4dee-ae56-4598b5f40760" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep.html" beforeDir="false" afterPath="$PROJECT_DIR$/deep.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eufoamia.html" beforeDir="false" afterPath="$PROJECT_DIR$/eufoamia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mula.html" beforeDir="false" afterPath="$PROJECT_DIR$/mula.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telcca.html" beforeDir="false" afterPath="$PROJECT_DIR$/telcca.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/work.html" afterDir="false" />
-    </list>
+    <list default="true" id="d93d0960-bfb8-4dee-ae56-4598b5f40760" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +75,7 @@
       <workItem from="1600232892495" duration="27388000" />
       <workItem from="1600325168613" duration="2611000" />
       <workItem from="1600401357368" duration="24047000" />
-      <workItem from="1600503209624" duration="11141000" />
+      <workItem from="1600503209624" duration="11455000" />
     </task>
     <servers />
   </component>
