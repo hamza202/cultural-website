@@ -689,6 +689,13 @@ $(document).ready(function () {
 
             });
 
+            $('.mobile-menu .three').on('click', function () {
+                tl.reversed(!tl.reversed());
+                tl.eventCallback("onReverseComplete", function () {
+                    t1.play();
+                })
+            });
+
             var t2 = new TimelineMax({paused: true});
             t2.to('#header .head-logo img', {
                 opacity: 1,
