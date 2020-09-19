@@ -4,16 +4,10 @@
     <list default="true" id="d93d0960-bfb8-4dee-ae56-4598b5f40760" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.html" beforeDir="false" afterPath="$PROJECT_DIR$/connect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/deep.html" beforeDir="false" afterPath="$PROJECT_DIR$/deep.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eufoamia.html" beforeDir="false" afterPath="$PROJECT_DIR$/eufoamia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ezgif.com-gif-maker.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/img18.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mula.html" beforeDir="false" afterPath="$PROJECT_DIR$/mula.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telcca.html" beforeDir="false" afterPath="$PROJECT_DIR$/telcca.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/work.html" afterDir="false" />
@@ -91,7 +85,7 @@
       <workItem from="1600232892495" duration="27388000" />
       <workItem from="1600325168613" duration="2611000" />
       <workItem from="1600401357368" duration="24047000" />
-      <workItem from="1600503209624" duration="9747000" />
+      <workItem from="1600503209624" duration="11141000" />
     </task>
     <servers />
   </component>
