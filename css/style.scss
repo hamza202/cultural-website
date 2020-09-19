@@ -224,7 +224,7 @@ a {
   left: 0;
   right: 0;
   height: 100vh;
-  z-index: 11;
+  z-index: 9000;
   background-color: $primary-color;
   width: 100%;
 
@@ -258,10 +258,9 @@ a {
 
 #menu-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20px;
   right: 15px;
-  z-index: 12;
+  z-index: 9001;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -986,9 +985,16 @@ a {
   }
   min-height: 100vh;
   display: flex;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y:auto;
   align-items: center;
   justify-content: center;
   background-color: $purple-color;
+  transform: translateX(100%);
 }
 .arrow-back{
   img{
@@ -1152,3 +1158,8 @@ input[type=number] {
     font-size: 25px;
   }
 }
+.nav_active{
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+

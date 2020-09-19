@@ -12,6 +12,11 @@ $(document).ready(function () {
             }
         );
 
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            scrollbarClass: "scroll-bar"
+        });
 
         var arr1 = [0, 0, 100, 0, 100, 100, 0, 100];
 
@@ -585,12 +590,16 @@ $(document).ready(function () {
                 el: document.querySelector(".smooth-scroll"),
                 smooth: true
             });
+
             $('.go-to').on("click", function () {
                 locoScroll.scrollTo($(this).attr("data-goTo"), -50)
             });
+
             // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
             locoScroll.on("scroll", ScrollTrigger.update);
-
+            locoScroll.on("scroll", function () {
+                $('#menu-btn').css("transform", `translateY(${-locoScroll.scroll.instance.scroll.y}px)`)
+            });
             // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
             ScrollTrigger.scrollerProxy(".smooth-scroll", {
                 scrollTop(value) {
@@ -601,13 +610,17 @@ $(document).ready(function () {
                 },
                 // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
                 pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+
+
             });
+
 
             work_page_scroll_trigger();
             deep_page_scroll_trigger();
             mula_page_scroll_trigger();
             about_page_scroll_trigger();
 
+            ScrollTrigger.update;
             ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
             // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
@@ -621,63 +634,94 @@ $(document).ready(function () {
         }
 
 // menu toggle animation
-    if ($('#header').length) {
-        var tl = new TimelineMax({paused: true});
+        function toggleClass(s, n) {
+            if ($(s).hasClass(n)) {
+                $(s).removeClass(n);
+            } else {
+                $(s).addClass(n);
+            }
 
-        tl.to('.line1', {
-            duration: 0.6,
-            rotate: 45,
-            y: 4,
-            ease: 'power4.out'
-        });
-        tl.to('.line2', {
-            duration: 0.6,
-            rotate: -45,
-            y: -4,
-            ease: 'power4.out',
-            delay: -0.6
-        });
+        }
 
-        //menu
-        tl.to('.mobile-menu', {
-            opacity: 1,
-            display: 'flex',
-            duration: 1,
-            ease: 'power4.out',
-            delay: -0.4
-        });
-        tl.to('.mobile-menu ul li', {
-            opacity: 1,
-            duration: 0.7,
-            ease: 'power1.out',
-            delay: -0.3,
-            x: "0%",
-            stagger: 0.3
-        });
+        if ($('#header').length) {
+            var tl = new TimelineMax({paused: true});
 
-        tl.reverse();
+            tl.to('.line1', {
+                duration: 0.6,
+                rotate: 45,
+                y: 4,
+                ease: 'power4.out'
+            });
+            tl.to('.line2', {
+                duration: 0.6,
+                rotate: -45,
+                y: -4,
+                ease: 'power4.out',
+                delay: -0.6
+            });
 
-        $('#menu-btn').on('click', function () {
-            tl.reversed(!tl.reversed());
-            console.log('test')
-        });
-        var t2 = new TimelineMax({paused: true});
-        t2.to('#header .head-logo img', {
-            opacity: 1,
-            delay: -0.3,
-            duration: 1.5,
-            ease: Expo.easeInOut,
-        });
-        t2.to('.menu-list li', {
-            opacity: 1,
-            scale: 1,
-            stagger: 0.2,
-            duration: 1.5,
-            delay: -0.9,
-            ease: Expo.easeInOut,
-            x: 0
-        });
-    }
+            //menu
+            tl.to('.mobile-menu', {
+                opacity: 1,
+                display: 'flex',
+                duration: 1,
+                ease: 'power4.out',
+                delay: -0.4
+            });
+            tl.to('.mobile-menu ul li', {
+                opacity: 1,
+                duration: 0.7,
+                ease: 'power1.out',
+                delay: -0.3,
+                x: "0%",
+                stagger: 0.3
+            });
+
+            tl.reverse();
+
+            $('#menu-btn').on('click', function () {
+                tl.reversed(!tl.reversed());
+                tl.eventCallback("onStart", function () {
+                    return toggleClass('body', "nav_active");
+                }).eventCallback("onReverseComplete", function () {
+                    return toggleClass('body', "nav_active");
+                })
+
+            });
+
+            var t2 = new TimelineMax({paused: true});
+            t2.to('#header .head-logo img', {
+                opacity: 1,
+                delay: -0.3,
+                duration: 1.5,
+                ease: Expo.easeInOut,
+            });
+            t2.to('.menu-list li', {
+                opacity: 1,
+                scale: 1,
+                stagger: 0.2,
+                duration: 1.5,
+                delay: -0.9,
+                ease: Expo.easeInOut,
+                x: 0
+            });
+
+        }
+
+        if ($('.connect-page').length) {
+            var t1 = new TimelineMax({paused: true});
+            t1.to('.connect-page', {
+                duration: 1.5,
+                x: 0,
+                ease: 'power3.out'
+            });
+            $('.contact-click').on('click', function () {
+                t1.play();
+            });
+            $('.connect-close').on('click', function () {
+                t1.reverse();
+            })
+        }
         $(window).on('load', function () {
 
             var t4 = new TimelineMax({paused: true});
@@ -743,10 +787,10 @@ $(document).ready(function () {
             //     })
             // }
             let inputFocus = $(".input-container input");
-            inputFocus.on("focusin",function () {
+            inputFocus.on("focusin", function () {
                 $(this).parent().addClass("focus");
             });
-            inputFocus.on("focusout",function () {
+            inputFocus.on("focusout", function () {
                 $(this).parent().removeClass("focus");
             })
         });
