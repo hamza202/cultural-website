@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d93d0960-bfb8-4dee-ae56-4598b5f40760" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/locomotive-scroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/locomotive-scroll.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eufoamia.html" beforeDir="false" afterPath="$PROJECT_DIR$/eufoamia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/work.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,9 @@
       <workItem from="1600325168613" duration="2611000" />
       <workItem from="1600401357368" duration="24047000" />
       <workItem from="1600503209624" duration="11455000" />
-      <workItem from="1600607281738" duration="2151000" />
+      <workItem from="1600607281738" duration="2524000" />
+      <workItem from="1600706069367" duration="11000" />
+      <workItem from="1600718397495" duration="2937000" />
     </task>
     <servers />
   </component>
@@ -169,6 +172,10 @@
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
     <state x="1827" y="-11" key="SettingsEditor/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600434334242" />
+    <state x="2022" y="78" width="607" height="536" key="find.popup" timestamp="1600718726888">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="2022" y="78" width="607" height="536" key="find.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600718726888" />
     <state x="2307" y="157" key="run.anything.popup" timestamp="1600447997777">
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>

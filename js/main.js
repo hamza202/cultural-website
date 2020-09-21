@@ -12,11 +12,6 @@ $(document).ready(function () {
             }
         );
 
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            scrollbarClass: "scroll-bar"
-        });
 
         var arr1 = [0, 0, 100, 0, 100, 100, 0, 100];
 

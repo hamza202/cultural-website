@@ -175,6 +175,7 @@ a {
   margin: 0 auto;
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover;
 
 }
 
@@ -980,10 +981,8 @@ a {
   }
 }
 .connect-page{
-  @include media-breakpoint-down(lg){
-    padding-top: 30px;
-  }
-  min-height: 100vh;
+
+  height: 100vh;
   display: flex;
   position: fixed;
   z-index: 999999;
@@ -995,6 +994,10 @@ a {
   justify-content: center;
   background-color: $purple-color;
   transform: translateX(100%);
+  @include media-breakpoint-down(lg){
+    padding-top: 30px;
+    display: block;
+  }
 }
 .arrow-back{
   img{

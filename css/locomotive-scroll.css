@@ -14,7 +14,7 @@ html.has-scroll-dragging {
 .has-scroll-smooth [data-scroll-container] {
   min-height: 100vh; }
 
-.c-scrollbar {
+.c-scrollbar,.scroll-bar {
   position: absolute;
   right: 0;
   top: 0;
@@ -23,11 +23,15 @@ html.has-scroll-dragging {
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0; }
-  .c-scrollbar:hover {
+  .c-scrollbar:hover, .scroll-bar:hover {
     transform: scaleX(1.45); }
   .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
     opacity: 1; }
-
+.scroll-bar:hover, .has-scroll-scrolling .scroll-bar, .has-scroll-dragging .scroll-bar {
+  opacity: 1; }
+.scroll-bar{
+  z-index: 9999999999999999;
+}
 .c-scrollbar_thumb {
   position: absolute;
   top: 0;
