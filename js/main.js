@@ -676,12 +676,6 @@ $(document).ready(function () {
 
             $('#menu-btn').on('click', function () {
                 tl.reversed(!tl.reversed());
-                tl.eventCallback("onStart", function () {
-                    return toggleClass('body', "nav_active");
-                }).eventCallback("onReverseComplete", function () {
-                    return toggleClass('body', "nav_active");
-                })
-
             });
 
             $('.mobile-menu .three').on('click', function () {
